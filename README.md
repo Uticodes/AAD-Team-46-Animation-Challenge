@@ -8,7 +8,7 @@ See the instructions of the challenge in this [doc](https://docs.google.com/docu
 
 This project is built with Gradle, the [Android Gradle plugin](http://tools.android.com/tech-docs/new-build-system/user-guide). Follow the steps below to setup the project localy.
 
-* Clone [AAD Team 19 Animation Challenge](https://github.com/AAD-Team-19/aad-team-19-animation-challenge) inside your working folder.
+* Clone [AAD Team 46 Animation Challenge](https://github.com/Uticodes/AAD-Team-46-Animation-Challenge.git) inside your working folder.
 * Start Android Studio
 * Select "Open Project" and select the generated root Project folder
 * You may be prompted with "Unlinked gradle project" -> Select "Import gradle project" and select
