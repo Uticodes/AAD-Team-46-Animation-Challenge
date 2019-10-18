@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".AboutALCActivity"
-            android:label="@string/about_label">
+            android:label="@string/about_label"/>
         <activity android:name=".MainActivity">
         </activity>
     </application>
