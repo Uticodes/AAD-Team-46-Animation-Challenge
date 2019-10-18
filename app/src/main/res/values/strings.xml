@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Team46</string>
     <string name="title_activity_team_members">TeamMembers</string>
+    <string name="Team46">AAD Team 46</string>
 </resources>

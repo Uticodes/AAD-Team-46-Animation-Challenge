@@ -3,6 +3,8 @@ package com.example.team46;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class MemberRecyclerAdapter extends RecyclerView.Adapter<MemberRecyclerAdapter.ViewHolder> {
 
@@ -41,6 +44,20 @@ public class MemberRecyclerAdapter extends RecyclerView.Adapter<MemberRecyclerAd
 
         Picasso.get().load(m.getImageURL()).into(holder.mImageView);
 
+        setAnimation(holder.itemView, position);
+
+    }
+
+    private int lastPosition = -1;
+    private  void setAnimation(View viewToAnimate, int postion) {
+        if(postion > lastPosition) {
+            ScaleAnimation anim = new ScaleAnimation(0.0f, 1.0f, 0.0f, 1.0f,
+                    Animation.RELATIVE_TO_SELF, 0.5f,
+                    Animation.RELATIVE_TO_SELF, 0.5f);
+            anim.setDuration(new Random().nextInt(501));
+            viewToAnimate.startAnimation(anim);
+            lastPosition = postion;
+        }
     }
 
     @Override
