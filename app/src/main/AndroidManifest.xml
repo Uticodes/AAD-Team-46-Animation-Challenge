@@ -18,8 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AboutALCActivity"
-            android:label="@string/about_label">
+
+        <activity
+            android:name=".AboutALCActivity"
+            android:label="@string/about_label"/>
+
         <activity android:name=".MainActivity">
         </activity>
     </application>
