@@ -13,6 +13,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
 
+// testing comment
 public class AboutALCActivity extends AppCompatActivity {
     WebView mWebView;
     Animation mAnimation;
