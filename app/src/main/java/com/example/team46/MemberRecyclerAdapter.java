@@ -20,7 +20,7 @@ public class MemberRecyclerAdapter extends RecyclerView.Adapter<MemberRecyclerAd
 
     private ArrayList<Members> members;
 
-    public MemberRecyclerAdapter(ArrayList<Members> members) {
+    MemberRecyclerAdapter(ArrayList<Members> members) {
         this.members = members;
     }
 
@@ -36,27 +36,24 @@ public class MemberRecyclerAdapter extends RecyclerView.Adapter<MemberRecyclerAd
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Members m = members.get(position);
 
-
         holder.mTxtname.setText(m.getName());
         holder.mTxtlocation.setText(m.getLocation());
-
-
-
-        Picasso.get().load(m.getImageURL()).into(holder.mImageView);
+        Picasso.get().load(m.getImageURL()).placeholder(R.drawable.user_placeholder).into(holder.mImageView);
 
         setAnimation(holder.itemView, position);
 
     }
 
     private int lastPosition = -1;
-    private  void setAnimation(View viewToAnimate, int postion) {
-        if(postion > lastPosition) {
+
+    private void setAnimation(View viewToAnimate, int position) {
+        if (position > lastPosition) {
             ScaleAnimation anim = new ScaleAnimation(0.0f, 1.0f, 0.0f, 1.0f,
                     Animation.RELATIVE_TO_SELF, 0.5f,
                     Animation.RELATIVE_TO_SELF, 0.5f);
             anim.setDuration(new Random().nextInt(501));
             viewToAnimate.startAnimation(anim);
-            lastPosition = postion;
+            lastPosition = position;
         }
     }
 
@@ -65,13 +62,13 @@ public class MemberRecyclerAdapter extends RecyclerView.Adapter<MemberRecyclerAd
         return members.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
+    static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public final ImageView mImageView;
-        public final TextView mTxtname;
-        public final TextView mTxtlocation;
+        final ImageView mImageView;
+        final TextView mTxtname;
+        final TextView mTxtlocation;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             mImageView = itemView.findViewById(R.id.img);
             mTxtname = itemView.findViewById(R.id.text_name);

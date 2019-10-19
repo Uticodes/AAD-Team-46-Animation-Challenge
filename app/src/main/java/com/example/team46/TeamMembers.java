@@ -2,21 +2,14 @@ package com.example.team46;
 
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.View;
-
 import java.util.ArrayList;
-import java.util.List;
 
 public class TeamMembers extends AppCompatActivity {
-    private RecyclerView mMembers;
     public MemberRecyclerAdapter mAdapter;
 
     @Override
@@ -30,7 +23,7 @@ public class TeamMembers extends AppCompatActivity {
 
         ArrayList<Members> members = initMembers();
 
-        mMembers = findViewById(R.id.member_list);
+        RecyclerView mMembers = findViewById(R.id.member_list);
         RecyclerView.LayoutManager memberManager = new LinearLayoutManager(this);
         mMembers.setLayoutManager(memberManager);
 
