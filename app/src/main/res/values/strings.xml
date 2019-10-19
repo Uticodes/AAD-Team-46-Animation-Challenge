@@ -1,12 +1,12 @@
 <resources>
 
-    <string name="app_name">Team46</string>
-    <string name="title_activity_team_members">TeamMembers</string>
+    <string name="app_name">Team 46</string>
+    <string name="title_activity_team_members">Team Members</string>
     <string name="Team46">AAD Team 46</string>
 
-    <string name="app_name">Team 46</string>
     <string name="about_label">ABOUT ALC</string>
     <string name="brought_to_you_by">Brought to you by</string>
     <string name="team_46">Team 46</string>
+    <string name="view_members">View Members</string>
 
 </resources>
