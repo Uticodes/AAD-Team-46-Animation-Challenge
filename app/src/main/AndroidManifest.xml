@@ -12,6 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <activity android:name=".SplashScreen" android:theme="@style/SplashScreenTheme">
+=======
         <activity
             android:name=".TeamMembers"
             android:label="TeamMembers"
@@ -24,11 +27,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".AboutALCActivity"
-            android:label="@string/about_label" />
+
+
+        <activity android:name=".AboutALCActivity"
+            android:theme="@style/SplashScreenTheme"
+           android:label="@string/about_label" />
+          
         <activity android:name=".MainActivity">
         </activity>
+
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
