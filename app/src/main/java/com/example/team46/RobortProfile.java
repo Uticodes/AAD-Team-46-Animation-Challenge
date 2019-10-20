@@ -22,6 +22,7 @@ public class RobortProfile extends AppCompatActivity {
         imageView = findViewById(R.id.imageView);
         textView = findViewById(R.id.name_id);
 
+        // load anim to textview and imageView
         fadeSlide();
     }
 
