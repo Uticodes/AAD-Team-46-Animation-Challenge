@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">Team46</string>
     <string name="about_label">ABOUT ALC</string>
+
+
+
+    <string name="my_profile">My Profile</string>
+    <string name="track_android">Track: Android</string>
+    <string name="country">Country: Nigeria</string>
+    <string name="email">Email: Coding180@gmail.com</string>
+    <string name="number">Phone Number: +2347038886539</string>
+    <string name="slack">Team Name: AAD-Team-46</string>
+    <string name="name_id">Robort Gabriel</string>
+
+
+
 </resources>

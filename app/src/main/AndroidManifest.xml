@@ -11,18 +11,22 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashScreen" android:theme="@style/SplashScreenTheme">
+        <activity android:name=".SplashScreen"
+            android:theme="@style/SplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity android:name=".AboutALCActivity"
             android:label="@string/about_label"/>
         <activity android:name=".MainActivity">
         </activity>
-        <activity android:name=".RobortProfile" />
+        <activity android:name=".RobortProfile">
+
+        </activity>
     </application>
 
 </manifest>
