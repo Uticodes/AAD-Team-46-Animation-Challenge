@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+// testing comment
 public class AboutALCActivity extends AppCompatActivity {
     WebView mWebView;
     Animation mAnimation;
