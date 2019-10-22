@@ -3,6 +3,7 @@ package com.example.team46;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Bitmap;
+import android.graphics.drawable.AnimationDrawable;
 import android.net.http.SslError;
 import android.os.Bundle;
 import android.view.View;
@@ -19,9 +20,11 @@ import android.widget.TextView;
 public class AboutALCActivity extends AppCompatActivity {
     WebView mWebView;
     Animation mAnimation;
-    ImageView imageView;
-    TextView mDotOne, mDotTwo, mDotThree;
+    ImageView imageView, appbarIcon;
+    TextView mDotOne, mDotTwo, mDotThree, mUrlView;
     LinearLayout mDotLayout;
+    AnimationDrawable animationDrawable;
+    String aboutUrlString = "https://andela.com/alc/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +37,13 @@ public class AboutALCActivity extends AppCompatActivity {
         mDotTwo = findViewById(R.id.loading_dot_two);
         mDotThree = findViewById(R.id.loading_dot_three);
         mDotLayout = findViewById(R.id.about_loader_layout);
+        appbarIcon = findViewById(R.id.download_resource_image);
+        mUrlView = findViewById(R.id.about_page_url);
 
         //Enabling javascript
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.loadUrl("https://andela.com/alc/");
+        mUrlView.setText(aboutUrlString);
 
         blink(imageView);
         blinker(mDotOne, 0);
@@ -58,8 +64,19 @@ public class AboutALCActivity extends AppCompatActivity {
                 clearAnimation(imageView);
                 mWebView.setVisibility(View.VISIBLE);
                 fadeSlide(mWebView);
+
+                animationDrawable.stop();
             }
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        appbarIcon.setBackgroundResource(R.drawable.download_amination_list);
+        animationDrawable = (AnimationDrawable) appbarIcon.getBackground();
+        animationDrawable.start();
     }
 
     public void fadeSlide(View view){

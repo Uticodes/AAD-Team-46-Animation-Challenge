@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
@@ -56,14 +55,12 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.menu_about:
                 startActivity(new Intent(this, AboutALCActivity.class));
                 return true;
-
 
         }
         return super.onOptionsItemSelected(item);
