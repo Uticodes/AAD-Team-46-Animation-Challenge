@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="url_text">20sp</dimen>
+</resources>
+=======
 <resources>
     <dimen name="fab_margin">16dp</dimen>
 </resources>
+>>>>>>> 2853a5704a67c085a3ee1185314e5aafeb789351
